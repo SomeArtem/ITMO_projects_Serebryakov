@@ -4,6 +4,7 @@ Markdown cheatsheet <br>
 # H1 Heading	
 ## H2 Heading
 ### H3 Heading
+#### H4 Heading
 Bold	**bold text** <br>
 Italic	*italicized text* <br>
 Blockquote	> blockquote <br>
