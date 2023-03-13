@@ -1,19 +1,20 @@
 #artem
 
-Markdown cheatsheet <br>
+Markdown cheatsheet 
 # H1 Heading	
 ## H2 Heading
 ### H3 Heading
-Bold	**bold text** <br>
-Italic	*italicized text* <br>
-Blockquote	> blockquote <br>
-Ordered List	1. First item <br>
-2. Second item <br>
-3. Third item <br>
-Unordered List	- First item <br>
-- Second item <br>
-- Third item <br>
-Code	`code` <br>
-Horizontal Rule	--- <br>
-Link	[title](https://www.example.com) <br>
+#### H4 Heading
+Bold	**bold text** 
+Italic	*italicized text* 
+Blockquote	> blockquote 
+Ordered List	1. First item 
+2. Second item 
+3. Third item 
+Unordered List	- First item 
+- Second item 
+- Third item 
+Code	`code` 
+Horizontal Rule	--- 
+Link	[title](https://www.example.com) 
 Image	![alt text](image.jpg)
