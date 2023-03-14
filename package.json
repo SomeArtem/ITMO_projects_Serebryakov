@@ -1,22 +1,14 @@
 {
-  "name": "itmo_projects_serebryakov",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "itmo-projects-serebryakov",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"ohudfjdfhgjkldsfhklg\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SomeArtem/ITMO_projects_Serebryakov.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SomeArtem/ITMO_projects_Serebryakov/issues"
-  },
-  "homepage": "https://github.com/SomeArtem/ITMO_projects_Serebryakov#readme",
-  "dependencies": {
-    "json-server": "^0.17.2"
+  "devDependencies": {
+    "vite": "^4.1.0"
   }
 }
