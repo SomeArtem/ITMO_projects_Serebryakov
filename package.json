@@ -1,0 +1,22 @@
+{
+  "name": "itmo_projects_serebryakov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"ohudfjdfhgjkldsfhklg\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SomeArtem/ITMO_projects_Serebryakov.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SomeArtem/ITMO_projects_Serebryakov/issues"
+  },
+  "homepage": "https://github.com/SomeArtem/ITMO_projects_Serebryakov#readme",
+  "dependencies": {
+    "json-server": "^0.17.2"
+  }
+}
