@@ -14,8 +14,82 @@
     <main>
       <aside>aside</aside>
       <section>
-        <article>article</article>
+        <article>
+          <ol>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ol>
+          article
+          <ul>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+          </ul>
+          <h1>Header 1</h1>
+          <p>paragraph</p>
+          <i>italic</i>
+          <b>bold</b><br>
+          <a href="https://html.spec.whatwg.org/multipage/">сслыка</a> - <p>semantic html w3c</p>
+          <!-- коммент -->
+          <img src="https://dummyimage.com/600x400/731acc/ee9ef2" alt="asfasf">
+          <a href="https://unsplash.com/">unsplash</a> - <p>халявные картинки</p>
+          <!-- <map name=""></map> добавляет регионы к картинкам -->
+          <table title="таблица">
+            сделать таблицу у которой слиты некоторые ее части
+            <tr>
+              <td>1.1</td>
+              <td>1.2</td>
+              <td>1.3</td>
+              <td>1.4</td>
+            </tr>
+            <tr>
+              <td>2.1</td>
+              <td>2.2</td>
+              <td>2.3</td>
+              <td>2.4</td>
+            </tr>
+            <tr>
+              <td>3.1</td>
+              <td>3.2</td>
+              <td>3.3</td>
+              <td>3.4</td>
+            </tr>
+          </table>
+        </article>
       </section>
+      
+
+      <br>
+      <br>
+      <br>
+      <h2>Форма</h2>
+      <form method="post" onsubmit="return false;">
+        <div>
+          <label for="email">email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        
+        <div>
+          <label for="password">password</label>
+          <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+          <label for="text">text</label>
+          <input type="text" name="text" id="text" pattern="">
+        </div>
+
+        
+        есть конструкторы регулярных выражений
+    
+        <input type="submit" value="submit" onclick="(e)=>e.preventDefault">
+      </form>
+
+      <p>Можно создавать собственные кастомные web-componentsы</p>
+
     </main>
     <footer>footer</footer>
   </body>
