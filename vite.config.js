@@ -1,5 +1,13 @@
+import host from 'vite-plugin-host'
+
+
+
 export default {
-  server: {
-    port: 8080
-  }
+  plugins: [    
+    host(),    
+  ],
+
+  server: {    
+    port: 8080,
+    },    
 }
