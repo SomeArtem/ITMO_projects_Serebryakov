@@ -3,14 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <style>
+      .container {
+        border: 1px solid;
+        width: fit-content;
+        padding: 10px;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome App</title>
   </head>
   <body>
+    <!--#region 1.HEADERS  -->
+    <h1>1. Заголовки:</h1>
+    <div class="container">
+      <h1>Заголовок 1</h1>
+      <h2>Заголовок 2</h2>
+      <h3>Заголовок 3</h3>
+      <h4>Заголовок 4</h4>
+      <h5>Заголовок 5</h5>
+      <h6>Заголовок 6</h6>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 2.TEXTS  -->
+    <h1>2. Параграф в котором есть жирный, курсив и подчёркивание:</h1>
+    <div class="container">
+      <p>
+        <b>Lorem</b>, <i>ipsum</i> <u>dolor</u> sit amet consectetur adipisicing
+        elit. Iste voluptatem quasi adipisci hic dolore maxime! Fugiat nihil
+        maiores repudiandae repellat?
+      </p>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 3.LISTS  -->
+    <h1>3. Списки:</h1>
+    <div class="container">
+      <h3>Нумерованный:</h3>
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+
+      <h3>Ненумерованный:</h3>
+      <ul>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ul>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 4.FORM  -->
+    <h1>4. Форма:</h1>
+    <div class="container">
+      <form method="post" onsubmit="return false;">
+        <div>
+          <label for="email">email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div>
+          <label for="password">password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <label for="text">text</label>
+          <input type="text" name="text" id="text" />
+        </div>
+        <div>
+          <label for="date">date</label>
+          <input type="date" name="date" id="date" />
+        </div>
+        <div>
+          <label for="checkbox">checkbox</label>
+          <input type="checkbox" name="checkbox" id="checkbox" />
+        </div>
+        <div>
+          <label for="radiobtn">radiobtn</label>
+          <input type="radio" name="radiobtn" id="radiobtn" />
+        </div>
+
+        <input
+          type="submit"
+          value="submit"
+          onclick="alert(
+        'Нажал на кнопку - получай инфу:\n'+
+        'email = '+document.getElementById ('email').value +'\n'+
+        'password = '+document.getElementById ('password').value+'\n'+
+        'text = '+document.getElementById ('text').value+'\n'+
+        'date = '+document.getElementById ('date').value+'\n'+        
+        'checkbox = '+document.getElementById ('checkbox').checked+'\n'+
+        'radiobtn = '+document.getElementById ('radiobtn').checked
+      );"
+        />
+      </form>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 5.TABLE  -->
+    <h1>5. Таблица у которой объединены 2 горизонтальные ячейки:</h1>
+    <div class="container">
+      <table title="таблица_title" border="1" cellpadding="5" cellspacing="3">
+        <caption>
+          Зоопарк
+        </caption>
+        <tr>
+          <th colspan="2">Кличка</th>
+          <th>Возраст</th>
+          <th>Цвет</th>
+        </tr>
+        <tr>
+          <td>Тузик</td>
+          <td>Пёс</td>
+          <td>4</td>
+          <td>Черно-коричневый</td>
+        </tr>
+        <tr>
+          <td>Мурка</td>
+          <td>Кошка</td>
+          <td>7</td>
+          <td>Чёрно-белая</td>
+        </tr>
+        <tr>
+          <td>Хрюша</td>
+          <td>Свин</td>
+          <td>5</td>
+          <td>Розовый</td>
+        </tr>
+      </table>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 6.DROPDOWNS  -->
+    <h1>6. Выпадающий список на 5 элементов:</h1>
+    <div class="container">
+      <br />
+      <select name="ZooNames">
+        <option value="Тузик">Тузик</option>
+        <option value="Мурка">Мурка</option>
+        <option value="Хрюша">Хрюша</option>
+        <option value="Снежок">Снежок</option>
+        <option value="Кар-Карыч">Кар-Карыч</option>
+      </select>
+      <br />
+      <br />
+    </div>
+    <!--#endregion -->
+
+    <!--#region 7.PICTURES  -->
+    <h1>7. Картинки:</h1>
+    <div class="container">
+      <h3>IMG:</h3>
+      <img
+        src="https://dummyimage.com/600x400/1f36cf/28b4f0"
+        alt="dummyimage"
+      />
+      <br />
+      <h3>SVG:</h3>
+      <svg width="600" height="400">
+        <rect fill="#34495e" width="600" height="400" />
+        <text
+          x="177"
+          y="215"
+          font-family="Verdana"
+          font-size="35"
+          fill="#43b983"
+        >
+          600 x 400 svg
+        </text>
+      </svg>
+    </div>
+    <!--#endregion -->
+
+    <!--#region 8. LESSON_2_html_intro -->
     <!-- <p>Welcome WebDev</p>
     <div id="app"></div>
     <script type="module" src="/main.js"></script> -->
-    <header>header</header>
+    <!-- <header>header</header>
     <main>
       <aside>aside</aside>
       <section>
@@ -32,12 +206,12 @@
           <p>paragraph</p>
           <i>italic</i>
           <b>bold</b><br>
-          <a href="https://html.spec.whatwg.org/multipage/">сслыка</a> - <p>semantic html w3c</p>
-          <!-- коммент -->
-          <img src="https://dummyimage.com/600x400/731acc/ee9ef2" alt="asfasf">
-          <a href="https://unsplash.com/">unsplash</a> - <p>халявные картинки</p>
-          <!-- <map name=""></map> добавляет регионы к картинкам -->
-          <table title="таблица">
+          <a href="https://html.spec.whatwg.org/multipage/">сслыка</a> - <p>semantic html w3c</p> -->
+    <!-- коммент -->
+    <!-- <img src="https://dummyimage.com/600x400/731acc/ee9ef2" alt="asfasf">
+          <a href="https://unsplash.com/">unsplash</a> - <p>халявные картинки</p> -->
+    <!-- <map name=""></map> добавляет регионы к картинкам -->
+    <!-- <table title="таблица">
             сделать таблицу у которой слиты некоторые ее части
             <tr>
               <td>1.1</td>
@@ -59,9 +233,7 @@
             </tr>
           </table>
         </article>
-      </section>
-      
-
+      </section>     
       <br>
       <br>
       <br>
@@ -70,27 +242,21 @@
         <div>
           <label for="email">email</label>
           <input type="email" name="email" id="email">
-        </div>
-        
+        </div>        
         <div>
           <label for="password">password</label>
           <input type="password" name="password" id="password">
         </div>
-
         <div>
           <label for="text">text</label>
           <input type="text" name="text" id="text" pattern="">
-        </div>
-
-        
-        есть конструкторы регулярных выражений
-    
+        </div>        
+        есть конструкторы регулярных выражений    
         <input type="submit" value="submit" onclick="(e)=>e.preventDefault">
       </form>
-
       <p>Можно создавать собственные кастомные web-componentsы</p>
-
     </main>
-    <footer>footer</footer>
+    <footer>footer</footer> -->
+    <!--#endregion -->
   </body>
 </html>
