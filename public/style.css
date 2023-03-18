@@ -10,6 +10,7 @@
   --article-color:hsl(228, 12%, 48%);
   --link-color:hsl(0, 0%, 100%);
   --canvas-color:hsl(30, 38%, 92%);
+  --priprimary-color-active: hwb(158deg 33.44% 30.71%);
 }
 * {
   box-sizing: border-box;
@@ -136,6 +137,9 @@
   text-decoration: none;
   padding: 16px;
   border-radius: 7px;
+}
+.product_btn:hover {
+  background-color: var(--priprimary-color-active);
 }
 .btn_icon{
   margin-right: 12px;
