@@ -6,6 +6,9 @@ export default {
   plugins: [    
     host(),    
   ],
+  build:{
+    
+  },
 
   server: {    
     port: 8080,
