@@ -1,5 +1,5 @@
-import './style.css'
-import './reset.css'
+import './public/style.css'
+//import './reset.css'
 import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
@@ -8,10 +8,11 @@ document.querySelector('#app').innerHTML = `
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
+    хуй жопа
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1>Привет, Мир!</h1>
+    <h1 class="red_class">Привет, Мир!</h1>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>

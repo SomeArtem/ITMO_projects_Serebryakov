@@ -6,41 +6,53 @@
     <style>
       @import "public/reset.css";
       @import "public/style.css";
+      body {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav section section"
+          "footer footer footer"
+          ;  
+        grid-gap: 8px;  
+        grid-template-columns: 50px 1fr 20%;
+        grid-template-rows: 50px 1fr 20% 20%;    
+        height: 100vh;  
+      }
+      header {
+        grid-area: header;
+      }
+      nav {
+        grid-area: nav;
+      }
+      section {
+        grid-area: section;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome App</title>
   </head>
-  <body class="canvas_color_bg">
-    <div class="block primary_color_bg"></div>
-    <div class="block canvas_color_bg" style="border: 1px solid #0003"></div>
-    <div class="block header_color_bg"></div>
-    <div class="block article_color_bg"></div>
-    <div class="block link_color_bg"></div>
-    <div class="container">
-      <div class="product">
-        <div>
-          <div class="product_pic"></div>
-        </div>
-        <div class="product_info link_color_bg">
-          <div class="product_type article_color_text">perfume</div>
-          <div class="product_name header_color_text">
-            Gabrielle Essence Eau De Parfum
-          </div>
-          <div class="product_description article_color_text">
-            A floral, solar and voluptuous interpretation composed by Olivier
-            Polge, Perfumer-Creator for the House of CHANEL.
-          </div>
-          <div class="prices">
-            <div class="product_price primary_color_text">$149.99</div>
-            <div class="old_price article_color_text">$169.99</div>
-          </div>
-
-          <a class="product_btn primary_color_bg link_color_text" href="#"
-            ><img class="btn_icon" src="/icon-cart.svg" alt="" />
-            <span class="btn_txt">Add to Cart</span></a
-          >
-        </div>
-      </div>
+  <body>
+    <header style="background-color: rgba(255, 0, 0, 0.288)">header</header>
+      <nav style="background-color: rgba(0, 128, 0, 0.267)">nav</nav>
+      <section style="background-color: rgba(0, 0, 255, 0.253)">
+        section
+      </section>
+      <article style="background-color: rgba(238, 130, 238, 0.226)">
+        article
+      </article>
+      <footer style="background-color: rgba(128, 128, 128, 0.253)">
+        footer
+      </footer>
     </div>
+    <div id="app">
+      <!-- <p>tilemap-шо ето?</p><br> -->
+      
+    <!--<script type="module" src="/main.js"></script>-->
   </body>
 </html>
