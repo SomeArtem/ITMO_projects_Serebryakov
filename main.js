@@ -63,7 +63,7 @@ for (let i = 0; i < services.length; i++) {
     <div class="service_award">${element.service_award}</div>
   </div>
   <div class="service_footer">
-    <div class="service_location">${element.service_award}</div>
+    <div class="service_location">${element.service_location}</div>
   </div>`  
   services_container.appendChild(el)
 }
