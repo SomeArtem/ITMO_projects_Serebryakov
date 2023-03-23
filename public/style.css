@@ -23,15 +23,25 @@
   color: #fefeff;
 }
 .service{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   width: 30%;
   aspect-ratio: 1/1;
   margin: 10px;
+  /* padding: 10px; */
+  background-color: #212023;
+  /* border: 1px solid black;     */
+}
+.service_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 10px;
-  background-color: #1b1a1e;
-  border: 1px solid black;    
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: bottom right;
 }
 .service_head{
   display: flex;
