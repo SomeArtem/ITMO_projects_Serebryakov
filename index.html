@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
   </head>
-  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen font-delicious_handrawn">
+  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen font-sans">
     <div
       class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-4 mx-1"
     >
@@ -33,9 +33,13 @@
       </div>
       <div class="flex flex-col w-full bg-white rounded-2xl p-2">
         <div
-          class="serch__line flex flex-row w-full justify-between p-6 bg-slate-400"
+          class="serch__line flex flex-row w-full justify-between p-6 bg-slate-400 items-center"
         >
-          <span class="text-2xl">shit</span><span class="text-2xl">shit</span>
+          <span class="text-2xl">Team tasks</span>
+          <div class="flex">
+            <input type="text" placeholder="Search" class="text-2xl border-solid border-1 border-indigo-600 rounded-md h-full">
+            <button class="bg-green-600  rounded-md p2">+create task</button>
+          </div>
         </div>
       </div>
     </div>
