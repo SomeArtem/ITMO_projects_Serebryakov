@@ -2,35 +2,40 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" href="/logo.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="main.js"></script>
     <style>
-      @import "public/reset.css";
-      @import "public/style.css";
+      @import "/reset.css";
+      @import "/style.css";
+      /* @tailwind base;
+      @tailwind components;
+      @tailwind utilities; */
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
-    <style>
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
-    </style>
   </head>
-  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen">
+  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen font-delicious_handrawn">
     <div
-      class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-6"
+      class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-4 mx-1"
     >
       <div
-        class="flex flex-col min-w-[144px] py-2 rounded-3xl"
-        style="background-color: aquamarine"
+        class="flex flex-col min-w-[250px] py-2 rounded-3xl "
       >
-        <div class="text-lg font-bold">Taski</div>
+        <div class="flex flex-row items-center text-lg font-bold">
+          <div class=" i-ph-cube-focus text-[36px] text-orange-400 text-orange-400"></div>
+          <span>Taski</span>
+        </div>
+        
+        <!-- <div class="i-mdi-alarm"></div> -->
+        <!-- <div class="i-mdi-alarm text-orange-400" /> -->
         <div>Menu</div>
       </div>
-      <div class="flex flex-col w-full bg-red-300 rounded-3xl p-12">
+      <div class="flex flex-col w-full bg-white rounded-2xl p-2">
         <div
-          class="serch__line flex flex-row w-full justify-between p-12 bg-white rounded-3xl"
+          class="serch__line flex flex-row w-full justify-between p-6 bg-slate-400"
         >
-          <span>что то</span><span>что то</span>
+          <span class="text-2xl">shit</span><span class="text-2xl">shit</span>
         </div>
       </div>
     </div>
