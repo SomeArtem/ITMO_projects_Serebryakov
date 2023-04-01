@@ -23,7 +23,7 @@
         class="flex flex-col min-w-[250px] py-2 rounded-3xl "
       >
         <div class="flex flex-row items-center text-lg font-bold">
-          <div class=" i-ph-cube-focus text-[36px] text-orange-400 text-orange-400"></div>
+          <div class=" i-ph-cube-focus-bold text-[36px] text-teal-600"></div>
           <span>Taski</span>
         </div>
         
@@ -32,13 +32,134 @@
         <div>Menu</div>
       </div>
       <div class="flex flex-col w-full bg-white rounded-2xl p-2">
-        <div
-          class="serch__line flex flex-row w-full justify-between p-6 bg-slate-400 items-center"
-        >
-          <span class="text-2xl">Team tasks</span>
-          <div class="flex">
-            <input type="text" placeholder="Search" class="text-2xl border-solid border-1 border-indigo-600 rounded-md h-full">
-            <button class="bg-green-600  rounded-md p2">+create task</button>
+        <div class="serch__line flex flex-row w-full justify-between p-6 items-center">
+          <span class="text-2xl font-extrabold">Team tasks</span>
+          <div class="flex items-center h-full gap-x-6">
+            <div class="relative">
+              <input id="search" name="search" type="text" class="peer h-10 p-3 w-full border-1 rounded-lg border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-teal-600" placeholder="Search" />
+              <label for="search" class="absolute bg-white left-3 -top-2 !peer-focus:-top-2 !peer-focus:text-gray-600 !peer-focus:text-sm text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2">Search</label>
+            </div>
+            <button class="bg-teal-600  rounded-lg p2"><span class="text-white">+ Create Task</span></button>
+          </div>
+        </div>
+        <div class="flex flex-row w-full justify-between p-6 items-center">
+          <span class="">filter</span>
+          <div class="flex items-center h-full gap-x-6">
+            <span>groupby</span>
+            <span>sortby</span>  
+          </div>
+        </div>
+        <div class="flex flex-row w-full justify-between">
+          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+            <div class="flex flex-row justify-between my-8">
+              <div class=" flex text-2xl font-bold gap-x-4">
+                <span>To Do</span>
+                <span class="text-gray-400">2</span>
+              </div>
+              <div>
+                <span>+</span>
+                <span>...</span>
+              </div>
+            </div>
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class="font-bold text-lg">Layout Design</span>
+                <span>...</span>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-row my-4">
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Update</span>
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Web</span>
+                </div>
+                <span>12 days left</span>
+              </div>
+              <div class="rounds flex flex-row">
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-3"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
+              </div>
+            </div>
+
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
+              </div>
+            </div>
+            
+          </div>
+          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+            <div class="flex flex-row justify-between my-8">
+              <div class=" flex text-2xl font-bold gap-x-4">
+                <span>To Do</span>
+                <span class="text-gray-400">2</span>
+              </div>
+              <div>
+                <span>+</span>
+                <span>...</span>
+              </div>
+            </div>
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class="font-bold text-lg">Layout Design</span>
+                <span>...</span>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-row my-4">
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Update</span>
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Web</span>
+                </div>
+                <span>12 days left</span>
+              </div>
+              <div class="rounds flex flex-row">
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-3"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
+              </div>
+            </div>
+
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
+              </div>
+            </div>
+            
+          </div>
+          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+            <div class="flex flex-row justify-between my-8">
+              <div class=" flex text-2xl font-bold gap-x-4">
+                <span>To Do</span>
+                <span class="text-gray-400">2</span>
+              </div>
+              <div>
+                <span>+</span>
+                <span>...</span>
+              </div>
+            </div>
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class="font-bold text-lg">Layout Design</span>
+                <span>...</span>
+              </div>
+              <div class="flex flex-row justify-between items-center">
+                <div class="flex flex-row my-4">
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Update</span>
+                  <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Web</span>
+                </div>
+                <span>12 days left</span>
+              </div>
+              <div class="rounds flex flex-row">
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-3"></div>
+                <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
+              </div>
+            </div>
+
+            <div class="card bg-white p-3 rounded-lg my-3">
+              <div class="flex flex-row justify-between">
+                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
