@@ -35,6 +35,50 @@
 
 
 //браузерный api
-// let app=document.body.children[0]
-// app.textContent='Volodymir'
-// console.log()
+let app=document.body.children[0]
+app.textContent='Volodymir'
+console.log()
+
+//функции
+const DOM = document.getElementById.bind(document)
+const domInpName=DOM('inpName')
+const domInpSurname=DOM('inpSurname')
+const domConResult=DOM('result')
+let addResult=add(10,3)
+
+function add(a,b=5){
+    const result=a+b
+    console.log("a+b: "+result)
+    return result
+}
+
+console.log('addresult:', {addResult})
+console.log(domInpName.value, domInpSurname.value)
+
+domInpName.oninput=oninpchange;
+domInpSurname.oninput=oninpchangesur;
+let firstname=''
+let surname=''
+let fullname=''
+
+
+function oninpchange(e){
+    firstname=e.target.value
+    //console.log('oninpchange: ',firstname)    
+    e.stopPropagation();    
+    fullname=firstname+' '+surname
+    renderName(fullname)
+}
+function oninpchangesur(e){
+    surname=e.target.value
+    //console.dir('onsurchange: ',surname)  
+    e.stopPropagation(); 
+    
+    fullname=firstname+' '+surname
+    renderName(fullname)
+}
+
+function renderName(f) {
+    console.dir(f)
+    domConResult.textContent=f    
+}
