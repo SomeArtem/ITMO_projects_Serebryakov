@@ -3,66 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <style>
-      @import 'public/reset.css';
-      
-      .card{
-        width: 144px;
-        margin: 0 auto;
-        text-align: center;
-        border: 1px solid black;
-        font-family: 'Roboto', sans-serif;
-        /* background-color: ;
-        color: ;
-        padding: auto; */
-      }
-      .card>h1{
-        font-size: 2rem;
-        line-height: 1.25;
-        letter-spacing: 1px;
-        font-weight: bold;
-
-      }
-      .card .text{
-        font-weight: lighter;
-        font-size: 0.75rem;
-      }
-      .card>.price{        
-        color: #666;
-      }
-      .card img{
-        margin-bottom: 0.5rem;
-      }
-      p:not(:last-child){
-        margin-bottom: 1rem;
-      }
-      button{
-        border: 1px solid black;
-        width: 100% ;
-        background-color:  black;
-        color: white;
-      }
+      @import "public/reset.css";
+      @import "public/style.css";
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome App</title>
   </head>
-  <body>
-    <div class="card">
-      <img src="./img.png" alt="nature" style="width: 100%;">
-      <h1>Tailored jeans</h1>
-      <p class="price">$19.99</p>
-      <p class="text">Some text about these jeans</p>
-      <p><button>Add to cart</button></p>
-    </div>
+  <body class="canvas_color_bg">
+    <div class="block primary_color_bg"></div>
+    <div class="block canvas_color_bg" style="border: 1px solid #0003"></div>
+    <div class="block header_color_bg"></div>
+    <div class="block article_color_bg"></div>
+    <div class="block link_color_bg"></div>
+    <div class="container">
+      <div class="product">
+        <div>
+          <div class="product_pic"></div>
+        </div>
+        <div class="product_info link_color_bg">
+          <div class="product_type article_color_text">perfume</div>
+          <div class="product_name header_color_text">
+            Gabrielle Essence Eau De Parfum
+          </div>
+          <div class="product_description article_color_text">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </div>
+          <div class="prices">
+            <div class="product_price primary_color_text">$149.99</div>
+            <div class="old_price article_color_text">$169.99</div>
+          </div>
 
-    <div style="width: 120px; height: 120px; background-color: red; position: relative;">
-      <div style="width: 100px; height: 100px; background-color: rgb(17, 0, 255); position: absolute; top: -10px;"></div>
-      <!-- position fixed - это относительно всего документа -->
-      <!-- https://capricious-power.surge.sh/ ссылка на мой SURGE авторизац. мыло - gmail-->
+          <a class="product_btn primary_color_bg link_color_text" href="#"
+            ><img class="btn_icon" src="/icon-cart.svg" alt="" />
+            <span class="btn_txt">Add to Cart</span></a
+          >
+        </div>
+      </div>
     </div>
-    
   </body>
 </html>
