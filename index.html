@@ -15,24 +15,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
   </head>
-  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen font-sans">
-    <div
-      class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-4 mx-1"
-    >
-      <div
-        class="flex flex-col min-w-[250px] py-2 rounded-3xl "
-      >
+  <body class=" grid place-items-center p-12 w-screen h-screen font-sans" style="background-color: #cfdbdb;">
+
+    <!-- APP -->
+    <div class="container flex flex-row w-full h-full bg-gray-100 rounded-3xl min-w-[1000px] p-4 mx-1">
+
+      <!-- MENU -->
+      <div class="flex flex-col min-w-[250px] py-2 rounded-3xl">
+
+        <!-- LOGO & NAME -->
         <div class="flex flex-row items-center text-lg font-bold">
-          <div class=" i-ph-cube-focus-bold text-[36px] text-teal-600"></div>
+          <div class="i-ph-cube-focus-bold text-[36px] text-teal-600"></div>
+          <!-- <div class="i-mdi-alarm text-orange-400" /> -->
           <span>Taski</span>
         </div>
         
-        <!-- <div class="i-mdi-alarm"></div> -->
-        <!-- <div class="i-mdi-alarm text-orange-400" /> -->
-        <div>Menu</div>
-      </div>
+        <!-- MENU NAVIGATION -->
+        <div class="menu__container">
+          <div class="person_block">
+            <div class="person flex flex-row items-center gap-2">
+              <div class="pic i-ph-smiley-angry-bold text-[48px] text-slate-500"></div>
+              <div class="person_info">
+                <div class="per_name font-bold text-lg">Артём Серебряков</div>
+                <div class="per_status text-gray-400 text-sm">Премиум Аккаунт</div>
+              </div>
+            </div>
+
+            <div class="person_nav">
+              <div>ПИК<span>Activity</span></div>
+              <div>ПИК<span>Activity</span></div>
+              <div>ПИК<span>Activity</span></div>
+            </div>
+          </div>
+          <div class="pages_block"></div>
+          <div class="login_block"></div>
+
+        </div>
+      </div>      
+
+      <!-- DISPLAY -->
       <div class="flex flex-col w-full bg-white rounded-2xl p-2">
-        <div class="serch__line flex flex-row w-full justify-between p-6 items-center">
+
+        <!-- SERCH__LINE -->
+        <div class="flex flex-row w-full justify-between p-6 items-center">
           <span class="text-2xl font-extrabold">Team tasks</span>
           <div class="flex items-center h-full gap-x-6">
             <div class="relative">
@@ -42,6 +67,8 @@
             <button class="bg-teal-600  rounded-lg p2"><span class="text-white">+ Create Task</span></button>
           </div>
         </div>
+
+        <!-- FILTER LINE -->
         <div class="flex flex-row w-full justify-between p-6 items-center">
           <span class="">filter</span>
           <div class="flex items-center h-full gap-x-6">
@@ -49,8 +76,14 @@
             <span>sortby</span>  
           </div>
         </div>
+        
+        <!-- GROUP__CONTAINER -->
         <div class="flex flex-row w-full justify-between">
-          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+
+          <!-- GROUP -->
+          <div class="bg-gray-200 w-full mx-2 rounded-xl p-3">
+
+            <!-- GROUP HEAD-->
             <div class="flex flex-row justify-between my-8">
               <div class=" flex text-2xl font-bold gap-x-4">
                 <span>To Do</span>
@@ -61,7 +94,9 @@
                 <span>...</span>
               </div>
             </div>
-            <div class="card bg-white p-3 rounded-lg my-3">
+
+            <!-- CARD -->
+            <div class="bg-white p-3 rounded-lg my-3">
               <div class="flex flex-row justify-between">
                 <span class="font-bold text-lg">Layout Design</span>
                 <span>...</span>
@@ -79,15 +114,18 @@
                 <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
               </div>
             </div>
-
-            <div class="card bg-white p-3 rounded-lg my-3">
-              <div class="flex flex-row justify-between">
-                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
-              </div>
-            </div>
             
+            <!-- ADD_BUTTON -->
+            <div class="cursor-pointer  bg-white p-3 rounded-lg my-3 hover:bg-teal-500 hover:text-white text-gray-500">
+              <div class="flex flex-row justify-between">
+                <span class="text-lg mx-auto ">+ Add Task</span>                
+              </div>
+            </div>            
           </div>
-          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+          <!-- GROUP -->
+          <div class="bg-gray-200 w-full mx-2 rounded-xl p-3">
+
+            <!-- GROUP HEAD-->
             <div class="flex flex-row justify-between my-8">
               <div class=" flex text-2xl font-bold gap-x-4">
                 <span>To Do</span>
@@ -98,7 +136,9 @@
                 <span>...</span>
               </div>
             </div>
-            <div class="card bg-white p-3 rounded-lg my-3">
+
+            <!-- CARD -->
+            <div class="bg-white p-3 rounded-lg my-3">
               <div class="flex flex-row justify-between">
                 <span class="font-bold text-lg">Layout Design</span>
                 <span>...</span>
@@ -116,15 +156,18 @@
                 <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
               </div>
             </div>
-
-            <div class="card bg-white p-3 rounded-lg my-3">
-              <div class="flex flex-row justify-between">
-                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
-              </div>
-            </div>
             
+            <!-- ADD_BUTTON -->
+            <div class="cursor-pointer  bg-white p-3 rounded-lg my-3 hover:bg-teal-500 hover:text-white text-gray-500">
+              <div class="flex flex-row justify-between">
+                <span class="text-lg mx-auto ">+ Add Task</span>                
+              </div>
+            </div>            
           </div>
-          <div class="GROUP bg-gray-200 w-full mx-2 rounded-xl p-3">
+          <!-- GROUP -->
+          <div class="bg-gray-200 w-full mx-2 rounded-xl p-3">
+
+            <!-- GROUP HEAD-->
             <div class="flex flex-row justify-between my-8">
               <div class=" flex text-2xl font-bold gap-x-4">
                 <span>To Do</span>
@@ -135,7 +178,9 @@
                 <span>...</span>
               </div>
             </div>
-            <div class="card bg-white p-3 rounded-lg my-3">
+
+            <!-- CARD -->
+            <div class="bg-white p-3 rounded-lg my-3">
               <div class="flex flex-row justify-between">
                 <span class="font-bold text-lg">Layout Design</span>
                 <span>...</span>
@@ -153,13 +198,13 @@
                 <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700 -translate-x-6"></div>
               </div>
             </div>
-
-            <div class="card bg-white p-3 rounded-lg my-3">
-              <div class="flex flex-row justify-between">
-                <span class=" text-lg mx-auto text-gray-500">+ Add Task</span>                
-              </div>
-            </div>
             
+            <!-- ADD_BUTTON -->
+            <div class="cursor-pointer  bg-white p-3 rounded-lg my-3 hover:bg-teal-500 hover:text-white text-gray-500">
+              <div class="flex flex-row justify-between">
+                <span class="text-lg mx-auto ">+ Add Task</span>                
+              </div>
+            </div>            
           </div>
         </div>
       </div>
