@@ -16,8 +16,9 @@ operCatcher.addEventListener("change", (e) => {
   display.innerText += e.target.value;
 });
 
+
 btnCalc.addEventListener("click", (e) => {
-  display.innerText = eval(display.innerText);
+  display.innerText = window.eval(display.innerText);//взял функцию из объекта window, описывающего div.display
   operCatcher.value = "shithead";
 });
 
