@@ -6,46 +6,44 @@
     <style>
       @import "public/reset.css";
       @import "public/style.css";
+      /* @tailwind base;
+      @tailwind components;
+      @tailwind utilities; */      
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
-    <style>
-      /* @tailwind base;
-      @tailwind components;
-      @tailwind utilities; */
-    </style>
+    <title>Calculator</title>
   </head>
-  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen">
-    <div
-      class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-6"
-    >
-      <div
-        class="flex flex-col min-w-[144px] py-2 rounded-3xl"
-        style="background-color: aquamarine"
-      >
-        <div class="text-lg font-bold">Taski</div>
-        <div>Menu</div>
+  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen">    
+    <div class="flex flex-col bg-zinc-50 border border-solid border-black rounded-md">
+      <div id="display" class="h-[100px] w-[160px] m-2 border border-solid border-black p-2 overflow-x-auto"></div>      
+      <select disabled class="mx-2" name="oper" id="oper">
+        <option value="+">Сложение</option>
+        <option value="-">Вычитание</option>
+        <option value="*">Умножение</option>
+        <option value="/">Деление</option>
+        <option value="shithead" selected class="hidden">Операция:</option>
+      </select>
+      <div class="flex flex-row">
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">1</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">2</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">3</div>
       </div>
-      <div class="flex flex-col w-full bg-red-300 rounded-3xl p-12">
-        <div
-          class="serch__line flex flex-row w-full justify-between p-12 bg-white rounded-3xl"
-        >
-          <span>что то</span><span>что то</span>
-        </div>
+      <div class="flex flex-row">
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">4</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">5</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">6</div>
       </div>
-    </div>
-    <div>
-      <div>
-        <label for="inpName">inpName</label>
-        <input type="text" id="inpName">
+      <div class="flex flex-row">
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">7</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">8</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">9</div>
       </div>
-      <div>
-        <label for="inpSurname">inpSurname</label>
-        <input type="text" id="inpSurname" >
+      <div class="flex flex-row">
+        <div class="btn_calc m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">=</div>
+        <div class="btn_anchor m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">0</div>
+        <div class="btn_clear m-2 px-4 py-1 border border-black border-solid cursor-pointer hover:bg-slate-200 active:bg-slate-400">C</div>
       </div>
-      <label for="result">result:</label>
-      <span id="result"></span>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
