@@ -16,7 +16,58 @@
     <title>ToDo</title>
   </head>
   <body class=" grid place-items-center p-12 w-screen h-screen font-sans" style="background-color: #cfdbdb;">
-
+    
+    
+    <!-- POPUP -->
+    <div id="popupCreateTask" class="fixed hidden w-screen h-screen top-0 left-0 bg-black/70 z-10 grid place-items-center">
+    <div class="flex flex-col min-w-[377px] bg-white p-6 rounded-2xl gap-y-4">
+      <div class="flex flex-row w-full justify-between">
+        <span class="text-xl font-bold">Create task</span>
+        <span id="closeBtn" class="cursor-pointer bg-red-300 p-2 rounded-full aspect-square">x</span>
+      </div>
+      <div class="flex flex-row">
+        <div class="flex flex-col w-full">
+          <label class="ml-1 text-sm text-neutral-600" for="inpDate">Title: </label>
+          <input
+            class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200"
+            id="inpTitle"
+            type="text"
+            placeholder="e.g. Read books"
+          />
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <div class="flex flex-col w-full">
+          <label class="ml-1 text-sm text-neutral-600" for="inpDate">End date: </label>
+          <input
+            class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200"
+            type="date"
+            id="inpDate"
+            name="trip-start"
+            min="2018-01-01"
+          />
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <div class="flex flex-col w-full">
+          <label for="countries" class="ml-1 text-sm text-neutral-600">Select tag:</label>
+          <select
+            id="countries"
+            class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200 focus:border-none"
+          >
+            <option selected>Choose a tag</option>
+            <option value="web">Web</option>
+            <option value="update">Update</option>
+            <option value="design">Design</option>
+            <option value="content">Content</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex flex-row pt-2">
+        <button class="bg-teal-600 text-white p-2 rounded-lg w-full font-bold">Create</button>
+      </div>
+    </div>
+    </div>
     <!-- APP -->
     <div class="container flex flex-row w-full h-full bg-gray-100 rounded-3xl min-w-[1000px] p-4 mx-1">
 
@@ -64,7 +115,7 @@
               <input id="search" name="search" type="text" class="peer h-10 p-3 w-full border-1 rounded-lg border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-teal-600" placeholder="Search" />
               <label for="search" class="absolute bg-white left-3 -top-2 !peer-focus:-top-2 !peer-focus:text-gray-600 !peer-focus:text-sm text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2">Search</label>
             </div>
-            <button class="bg-teal-600  rounded-lg p2"><span class="text-white">+ Create Task</span></button>
+            <button id="createButton" class="bg-teal-600  rounded-lg p2"><span class="text-white">+ Create Task</span></button>
           </div>
         </div>
 
