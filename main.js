@@ -45,7 +45,6 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
         domTask.parentNode.prepend(taskView)
 
         tasks.push(TaskVOo);
-        console.log(tasks);
-        
+        console.log(tasks);        
     }
 }
