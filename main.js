@@ -11,6 +11,7 @@ const getDOM=(selector)=>document.querySelector(selector);
 const FIND = (container, selector)=>container.querySelector(selector)
 
 const domTask = getDOM(Dom.Template.TASK)
+// domTask.remove();
 
 const tasks=[]
 
@@ -27,7 +28,9 @@ class TaskVO {
 getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{    
     const DomPopCreateTask=getDOM(Dom.Popup.ID);   
     const CloseButton=FIND(DomPopCreateTask, Dom.Popup.CLOSE_BUTTON);   
-    const ConfirmButton=FIND(DomPopCreateTask, Dom.Popup.CONFIRM_BUTTON);   
+    const ConfirmButton=FIND(DomPopCreateTask, Dom.Popup.CONFIRM_BUTTON);
+
+    
     
     DomPopCreateTask.classList.toggle('hidden');
     
@@ -35,16 +38,31 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
     CloseButton.onclick = ()=>{
         DomPopCreateTask.classList.toggle('hidden');
         CloseButton.onclick=null;
+        ConfirmButton.onclick=null;
     }
     ConfirmButton.onclick = ()=>{
-        const TaskVOo=new TaskVO(RandomString(12), Date.now(),'asfasf');
+        const InputTitle=FIND(DomPopCreateTask, Dom.Popup.INPUT_TITLE).value;
+        const InputDate=FIND(DomPopCreateTask, Dom.Popup.INPUT_DATE).value;
+        const InputTag=FIND(DomPopCreateTask, Dom.Popup.INPUT_TAG).value;
+       
+        
+        
+        const TaskVOo=new TaskVO(InputTitle, InputDate, InputTag);
+        tasks.push(TaskVOo);
 
         const taskView=domTask.cloneNode(true)
+
         const title = FIND(taskView,Dom.Template.Title);
+        const date = FIND(taskView,Dom.Template.Date);
+        const tag = FIND(taskView,Dom.Template.Tag);
+
         title.innerText=TaskVOo.title;
+        date.innerText=TaskVOo.x;
+        tag.innerText=TaskVOo.y;
+
         domTask.parentNode.prepend(taskView)
 
-        tasks.push(TaskVOo);
+        
         console.log(tasks);        
     }
 }

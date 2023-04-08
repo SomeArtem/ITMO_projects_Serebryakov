@@ -7,12 +7,19 @@ const Dom={
         Popup:{
             ID:"#popupCreateTask",
             CLOSE_BUTTON:"#closeBtn",
-            CONFIRM_BUTTON:"#ConfirmBtn"
+            CONFIRM_BUTTON:"#ConfirmBtn",
+            INPUT_TITLE:'#inpTitle',
+            INPUT_DATE: '#inpDate',
+            INPUT_TAG: '#countries',
+            
         },
         Template:{
             TASK:"#templateTask",
-            Title:"#taskTitle"
+            Title:"#taskTitle", 
+            Date:"#taskDate", 
+            Tag:"#taskTag",      
         }
+
     }
 
 
