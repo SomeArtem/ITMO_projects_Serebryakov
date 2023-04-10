@@ -51,10 +51,7 @@
       <div class="flex flex-row">
         <div class="flex flex-col w-full">
           <label for="countries" class="ml-1 text-sm text-neutral-600">Select tag:</label>
-          <select
-            id="countries"
-            class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200 focus:border-none"
-          >
+          <select multiple id="countries" class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200 focus:border-none">
             <option selected>Choose a tag</option>
             <option value="web">Web</option>
             <option value="update">Update</option>
@@ -148,7 +145,7 @@
 
             <!-- CARD -->
             <div class="CardContainer">
-              <div id="templateTask" class="bg-white p-3 rounded-lg my-3">
+              <div id="templateTask" class="bg-white p-3 rounded-lg my-3 hidden">
                 <div class="flex flex-row justify-between">
                   <span id="taskTitle" class="font-bold text-lg">Layout Design</span>
                   <span>...</span>

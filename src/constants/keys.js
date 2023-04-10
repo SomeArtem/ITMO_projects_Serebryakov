@@ -10,8 +10,7 @@ const Dom={
             CONFIRM_BUTTON:"#ConfirmBtn",
             INPUT_TITLE:'#inpTitle',
             INPUT_DATE: '#inpDate',
-            INPUT_TAG: '#countries',
-            
+            INPUT_TAG: '#countries',            
         },
         Template:{
             TASK:"#templateTask",
