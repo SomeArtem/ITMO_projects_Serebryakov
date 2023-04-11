@@ -83,9 +83,9 @@ const GetTasks=()=>{
             //tag.innerText=el.tag[i].value;
             tag.innerText=el.tag[i];
             tagContainer.appendChild(tag);
+                  
         }    
         domTaskcontainer.prepend(taskView);
-        console.log(taskView);       
     });
 
    
@@ -149,19 +149,21 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
         const InputTitle=FIND(DomPopCreateTask, Dom.Popup.INPUT_TITLE).value;
         const InputDate=FIND(DomPopCreateTask, Dom.Popup.INPUT_DATE).value;
         const InputTag=FIND(DomPopCreateTask, Dom.Popup.INPUT_TAG).selectedOptions;
-        //const InputTag2=[];
+        const InputTag2=[];
 
 
-        // for (let i = 0; i < InputTag.length; i++) {
-        //     InputTag2[i]=InputTag[i].innerText;            
-        // }        
+        for (let i = 0; i < InputTag.length; i++) {
+            InputTag2[i]=InputTag[i].innerText;            
+        }        
 
         if (InputTitle.trim()== '' || InputDate.trim()== '' || InputTag.length == 0) {
             alert('Чо, о**ел? Всё заполняй! :D');
         }else{
             //создаём таск и кладём в массив тасков
             const NewTask=new TaskVO(InputTitle, InputDate, InputTag);
-            tasks.push(NewTask);
+            const NewTask2=new TaskVO(InputTitle, InputDate, InputTag2);
+            
+            tasks.push(NewTask2);
             localStorage.setItem("tasks", JSON.stringify(tasks));
             AddTask(NewTask);
             Counter.innerHTML=tasks.length;
