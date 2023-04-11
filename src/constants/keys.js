@@ -16,7 +16,8 @@ const Dom={
             TASK:"#templateTask",
             Title:"#taskTitle", 
             Date:"#taskDate", 
-            Tag:"#taskTag",      
+            Tag:"#taskTag",
+            TaskCounter:"#TaskCounter",
         }
 
     }

@@ -31,19 +31,12 @@ if (localStorage.getItem("tasks")===null){
 }
 
 
-
-
-
-
-
-
-
 //функции поиска элементов
 const getDOM=(selector)=>document.querySelector(selector);
 const FIND = (container, selector)=>container.querySelector(selector);
 
 //функция рендера таска
-const RenderTask=(ob)=>{    
+const AddTask=(ob)=>{    
     //получаем поля темплейта для представления
     const domTaskcontainer= domTask.parentNode;
     const taskView=domTask.cloneNode(true);
@@ -66,7 +59,7 @@ const RenderTask=(ob)=>{
     domTaskcontainer.prepend(taskView);    
 }
 
-const RenderTask2=()=>{
+const GetTasks=()=>{
     //tasks = JSON.parse(localStorage.getItem("tasks"));
 
     tasks.forEach(el => {
@@ -102,9 +95,11 @@ const RenderTask2=()=>{
 
 //Темплейт таска
 const domTask = getDOM(Dom.Template.TASK);
+const Counter = getDOM(Dom.Template.TaskCounter);
 
-console.log(tasks);
-RenderTask2();
+Counter.innerHTML=tasks.length;
+
+GetTasks();
 
 
 
@@ -154,27 +149,32 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
         const InputTitle=FIND(DomPopCreateTask, Dom.Popup.INPUT_TITLE).value;
         const InputDate=FIND(DomPopCreateTask, Dom.Popup.INPUT_DATE).value;
         const InputTag=FIND(DomPopCreateTask, Dom.Popup.INPUT_TAG).selectedOptions;
-        const InputTag2=[];
+        //const InputTag2=[];
 
 
-        for (let i = 0; i < InputTag.length; i++) {
-            InputTag2[i]=InputTag[i].innerText;            
-        }        
+        // for (let i = 0; i < InputTag.length; i++) {
+        //     InputTag2[i]=InputTag[i].innerText;            
+        // }        
 
         if (InputTitle.trim()== '' || InputDate.trim()== '' || InputTag.length == 0) {
             alert('Чо, о**ел? Всё заполняй! :D');
         }else{
             //создаём таск и кладём в массив тасков
-            const NewTask=new TaskVO(InputTitle, InputDate, InputTag2);
+            const NewTask=new TaskVO(InputTitle, InputDate, InputTag);
             tasks.push(NewTask);
             localStorage.setItem("tasks", JSON.stringify(tasks));
-            RenderTask2();
+            AddTask(NewTask);
+            Counter.innerHTML=tasks.length;
             
             //закрываем попап, чистим листенеры
             DomPopCreateTask.classList.toggle('hidden');
             CloseButton.onclick=null;
             ConfirmButton.onclick=null;
         }
+
+        
+        FIND(DomPopCreateTask, Dom.Popup.INPUT_DATE).value=null;
+        FIND(DomPopCreateTask, Dom.Popup.INPUT_TAG).selectedOptions=null;
     }    
     //снимает с попапа сокрытие 
     DomPopCreateTask.classList.toggle('hidden');
