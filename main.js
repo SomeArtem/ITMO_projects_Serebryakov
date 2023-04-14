@@ -6,6 +6,9 @@ import RandomString from "./src/utils/stringUtils"
 import { randomStr } from '@antfu/utils'
 
 
+const KEY_LOCAL_TASKS = 'tasks';
+
+
 class TaskVO {
     // методы класса
     constructor(title, date, tag) {
@@ -56,7 +59,7 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
             const NewTask2=new TaskVO(InputTitle.value, InputDate.value, InputTag2);
             
             tasks.push(NewTask2);
-            localStorage.setItem("tasks", JSON.stringify(tasks));
+            localStorage.setItem(KEY_LOCAL_TASKS, JSON.stringify(tasks));
             AddTask(NewTask);
             TaskCounter.innerHTML=tasks.length;
 
@@ -87,20 +90,24 @@ getDOM(Dom.Button.CREATE_BUTTON).onclick=()=>{
 
 // полчаем данные из LS
 function getDataFromStorage() {
-    if (localStorage.getItem("tasks")===null){
-        localStorage.setItem("tasks", JSON.stringify(tasks));        
+    let arr=localStorage.getItem(KEY_LOCAL_TASKS);
+    if (arr===null){
+        localStorage.setItem(KEY_LOCAL_TASKS, JSON.stringify(tasks));        
     } else{
-        tasks = JSON.parse(localStorage.getItem("tasks"));
+        tasks = JSON.parse(arr);
     }    
 }
 
 //функции поиска элементов
 function getDOM(selector) {
-    return document.querySelector(selector);        
+    console.log('найден через getDOM:', document.getElementById(selector))
+    return document.getElementById(selector);        
 }
 
 function FIND(container, selector) {
-    return container.querySelector(selector);
+    console.log('найден через FIND:', container.querySelector(`[data-id="${selector}"]`))
+    return container.querySelector(`[data-id="${selector}"]`);
+    
 }
 
 //функция рендера таска

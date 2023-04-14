@@ -19,18 +19,19 @@
     
     
     <!-- POPUP -->
-    <div id="popupCreateTask" class="fixed hidden w-screen h-screen top-0 left-0 bg-black/70 z-10 grid place-items-center">
+    <div data-id="popupCreateTask" id="popupCreateTask" class="fixed hidden w-screen h-screen top-0 left-0 bg-black/70 z-10 grid place-items-center">
     <div class="flex flex-col min-w-[377px] bg-white p-6 rounded-2xl gap-y-4">
       <div class="flex flex-row w-full justify-between">
         <span class="text-xl font-bold">Create task</span>
-        <span id="closeBtn" class="cursor-pointer bg-red-300 p-2 rounded-full aspect-square hover:bg-red-400 i-ph-x-circle-bold text-[36px]"></span>
+        <span data-id="closeBtn" id="closeBtn" class="cursor-pointer bg-red-300 p-2 rounded-full aspect-square hover:bg-red-400 i-ph-x-circle-bold text-[36px]"></span>
       </div>
       <div class="flex flex-row">
         <div class="flex flex-col w-full">
           <label class="ml-1 text-sm text-neutral-600" for="inpDate">Title: </label>
           <input
             class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200"
-            id="inpTitle"
+            data-id="inpTitle"
+            id="inpTitle"            
             type="text"
             placeholder="e.g. Read books"
           />
@@ -42,6 +43,7 @@
           <input
             class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200"
             type="date"
+            data-id="inpDate"
             id="inpDate"
             name="trip-start"
             min="2018-01-01"
@@ -51,7 +53,7 @@
       <div class="flex flex-row">
         <div class="flex flex-col w-full">
           <label for="countries" class="ml-1 text-sm text-neutral-600">Select tag:</label>
-          <select multiple id="countries" class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200 focus:border-none">
+          <select multiple data-id="countries" id="countries" class="bg-neutral-100 p-1.5 rounded w-full border-1 border-neutral-200 focus:border-none">
             <option selected>Choose a tag</option>
             <option value="web">Web</option>
             <option value="update">Update</option>
@@ -61,10 +63,21 @@
         </div>
       </div>
       <div class="flex flex-row pt-2">
-        <button id="ConfirmBtn" class="bg-teal-600 text-white p-2 rounded-lg w-full font-bold hover:bg-teal-500">Confirm</button>
+        <button data-id="ConfirmBtn" id="ConfirmBtn" class="bg-teal-600 text-white p-2 rounded-lg w-full font-bold hover:bg-teal-500">Confirm</button>
       </div>
     </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
     <!-- APP -->
     <div class="container flex flex-row w-full h-full bg-gray-100 rounded-3xl min-w-[1000px] p-4 mx-1">
 
@@ -109,10 +122,10 @@
           <span class="text-2xl font-extrabold">Team tasks</span>
           <div class="flex items-center h-full gap-x-6">
             <div class="relative">
-              <input id="search" name="search" type="text" class="peer h-10 p-3 w-full border-1 rounded-lg border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-teal-600" placeholder="Search" />
+              <input id="search" name="search" type="text" class="peer h-10 p-3 w-full border border-solid rounded-lg border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-teal-600" placeholder="Search" />
               <label for="search" class="absolute bg-white left-3 -top-2 !peer-focus:-top-2 !peer-focus:text-gray-600 !peer-focus:text-sm text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2">Search</label>
             </div>
-            <button id="createButton" class="bg-teal-600  rounded-lg p2 hover:bg-teal-500"><span class="text-white">+ Create Task</span></button>
+            <button id="createButton" class="bg-teal-600  rounded-lg p2 hover:bg-teal-500 border-0 h-full"><span class="text-white">+ Create Task</span></button>
           </div>
         </div>
 
@@ -145,17 +158,17 @@
 
             <!-- CARD -->
             <div class="CardContainer">
-              <div id="templateTask" class="bg-white p-3 rounded-lg my-3 hidden">
+              <div data-id="templateTask" id="templateTask" class="bg-white p-3 rounded-lg my-3 hidden">
                 <div class="flex flex-row justify-between">
-                  <span id="taskTitle" class="font-bold text-lg">Layout Design</span>
+                  <span data-id="taskTitle" id="taskTitle" class="font-bold text-lg">Layout Design</span>
                   <span>...</span>
                 </div>
                 <div class="flex flex-row justify-between items-center">
                   <div class="flex flex-row my-4">
-                    <span id="taskTag" class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Update</span>
+                    <span data-id="taskTag" id="taskTag" class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Update</span>
                     <!-- <span class="bg-slate-100 p-1 mx-1 rounded-md text-sm block">Web</span> -->
                   </div>
-                  <span id="taskDate">12 days left</span>
+                  <span data-id="taskDate" id="taskDate">12 days left</span>
                 </div>
                 <div class="rounds flex flex-row">
                   <div class="rounded-full w-8 h-8 bg-orange-400 border-2 border-solid border-orange-700"></div>
