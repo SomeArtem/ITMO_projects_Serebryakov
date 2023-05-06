@@ -1,8 +1,8 @@
 /* ====== imports ====== */
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700&family=Fraunces:wght@700&display=swap');
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 /* ====== variables & globals ====== */
 :root {
@@ -27,7 +27,7 @@ p{
 
 /* ====== responsive ====== */
 @media (max-width: 375px) {
-  
+
 }
 @media (max-width: 1440px) {
 }
