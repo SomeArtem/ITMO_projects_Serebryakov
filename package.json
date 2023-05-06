@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && surge ./dist https://capricious-power.surge.sh/",
+    "build": "vite build && surge ./dist https://labored-statement.surge.sh",
     "preview": "vite preview"
   },
   "devDependencies": {

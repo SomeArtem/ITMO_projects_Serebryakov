@@ -14,59 +14,59 @@
       body *{
         font-family: 'Epilogue', sans-serif;
       }
-
     </style>
   </head>
-  <body class="flex flex-col h-screen bg-amber-100/50">
-    <!-- <h1>TAILWIND ПОДЛКЮЧЕН</h1> -->
-    
-    
+  <body class="flex flex-col h-screen"> 
     <div class="flex flex-col gap-x-8 h-full">
-      <header class="flex flex-row justify-between items-center bg-orange-500 px-6 py-4 font-bold text-neutral-500">            
+      <header class="flex flex-row justify-between items-center  px-6 py-4 font-bold text-neutral-500">   
           <div class="flex flex-row gap-x-8">
             <img src="/logo.svg" alt="some" class="">  
-            <nav class="flex flex-row gap-x-6">
-              <div class="flex flex-row gap-x-2 items-center hover:text-black">
-                <div>Features</div>
-                <img src="/icon-arrow-down.svg" alt="">
+            <nav class="md:flex hidden flex-row gap-x-6">
+              <div>
+                <div class="peer  hover:text-black">Features</div> 
+                <div class="absolute hidden peer-hover:flex hover:flex flex-col bg-white drop-shadow-lg rounded-2xl">
+                  <a class="px-5 py-3 cursor-pointer hover:text-black flex flex-row capitalize" href="#"><img class="h-fit mr-2" src="./icons/menu-icons/icon-todo.svg" alt="" srcset=""> todo list</a>
+                  <a class="px-5 py-3 cursor-pointer hover:text-black flex flex-row capitalize" href="#"><img class="h-fit mr-2" src="./icons/menu-icons/icon-calendar.svg" alt="" srcset=""> calendar</a>
+                  <a class="px-5 py-3 cursor-pointer hover:text-black flex flex-row capitalize" href="#"><img class="h-fit mr-2" src="./icons/menu-icons/icon-reminders.svg" alt="" srcset=""> reminders</a>
+                  <a class="px-5 py-3 cursor-pointer hover:text-black flex flex-row capitalize" href="#"><img class="h-fit mr-2" src="./icons/menu-icons/icon-planning.svg" alt="" srcset=""> planning</a>
+                </div>
               </div>
               <div class="hover:text-black cursor-pointer">Company </div>
               <div class="hover:text-black cursor-pointer">Careers</div>
               <div class="hover:text-black cursor-pointer">About</div>
             </nav>
           </div>
-          <div class="flex flex-row gap-x-4 items-center">
-            <div>Login</div> 
-            <div class="border-solid border-2 border-gray-500 rounded-lg px-3 py-3">Register</div>
-          </div>        
-      </header>
+          <div class="md:flex hidden flex-row gap-x-4 items-center">
+            <div class="hover:text-black cursor-pointer">Login</div> 
+            <p class="cursor-pointer rounded-lg inline-block px-7 py-3 bg-white font-semibold border-solid border-2 border-neutral-500  hover:text-black hover:border-black">Register</p>
+          </div>     
+          <div class="md:hidden flex flex-row gap-x-4 items-center">
+            <img src="./icons/nav-icons/icon-menu.svg" alt="" srcset="">
+          </div>   
+      </header>      
       <main class="flex h-full flex-col justify-between">
         <div class="flex flex-col h-full">
-          <div class="flex flex-row w-1/2 h-full items-center w-full p-20" style="background-color: brown;">
-            <div class="flex flex-col gap-y-6 ">
-              <div class="text-7xl font-black">Make remote work</div>
-              <div>
-                Get your team in sync, no matter your location. Streamline processes,
-                create team rituals, and watch productivity soar.
+          <div class="flex flex-col-reverse md:flex-row md:w-1/2 md:h-full items-center md:w-full md:p-20 p-3 content-between" >             
+            <div class="flex flex-col gap-y-6 justify-between h-full md:p-10">
+              <div class="flex flex-col h-[100%] justify-center">
+                <div class="text-[3rem] md:text-[5.7rem] font-black mb-7 leading-none">Make remote work</div>
+                <div class="mb-7 text-xl text-neutral-500">
+                  Get your team in sync, no matter your location. Streamline processes,
+                  create team rituals, and watch productivity soar.
+                </div>
+                <div class=""><p class="rounded-lg inline-block px-7 py-3 bg-black text-white font-semibold border-solid border-2 border-black hover:bg-white hover:text-black ">Learn more</p></div>
               </div>
-              <div><p class="rounded-lg inline-block px-7 py-3 bg-black text-white font-semibold">Learn more</p> </div>
-            </div>
-            <div class="h-full w-full bg-[url('/public/image-hero-desktop.png')] bg-contain bg-no-repeat"></div>
+              <div class="flex flex-row items-center justify-between overflow-hidden">
+                <img src="/clients/client-audiophile.svg" alt="client-audiophile" class="p-2 h-fit">
+                <img src="/clients/client-databiz.svg" alt="client-databiz" class="p-2 h-fit">
+                <img src="/clients/client-maker.svg" alt="client-maker" class="p-2 h-fit">
+                <img src="/clients/client-meet.svg" alt="client-meet" class="p-2 h-fit">
+              </div>
+            </div>            
+            <div class="w-full h-[100vh] bg-cover md:h-full md:w-full md:bg-[url('/image-hero-desktop.png')] bg-[url('/image-hero-mobile.png')] md:bg-contain bg-no-repeat bg-center"></div>
           </div>
         </div>
-        <div class="flex flex-col w-1/2">
-          icons         
-        </div>
-
-
       </main>
     </div>
-
-
-  
-
-    <!-- <div id="app"></div> -->
-    <!-- <p>tilemap-шо ето?</p><br> -->
-    <!--<script type="module" src="/main.js"></script>-->
   </body>
 </html>
