@@ -79,7 +79,7 @@
   overflow: hidden;
 }
 .product_pic {
-  background: url(/prod_img4.jpg);
+  background: url('/prod_img4.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 300px;
