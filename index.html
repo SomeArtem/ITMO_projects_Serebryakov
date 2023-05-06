@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Monsters</title>
     <style>
-      @import "public/reset.css";
-      @import "public/style.css";
+        .container{
+            display: inline-block;
+            margin: 5px;
+        }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
-    <style>
-      /* @tailwind base;
-      @tailwind components;
-      @tailwind utilities; */
-    </style>
-  </head>
-  <body class="bg-teal-100/50 grid place-items-center p-12 w-screen h-screen">
-    <div
-      class="container flex flex-row w-full h-full bg-gray-300 rounded-3xl min-w-[1000px] p-6"
-    >
-      <div
-        class="flex flex-col min-w-[144px] py-2 rounded-3xl"
-        style="background-color: aquamarine"
-      >
-        <div class="text-lg font-bold">Taski</div>
-        <div>Menu</div>
-      </div>
-      <div class="flex flex-col w-full bg-red-300 rounded-3xl p-12">
-        <div
-          class="serch__line flex flex-row w-full justify-between p-12 bg-white rounded-3xl"
-        >
-          <span>что то</span><span>что то</span>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <label for="inpName">inpName</label>
-        <input type="text" id="inpName">
-      </div>
-      <div>
-        <label for="inpSurname">inpSurname</label>
-        <input type="text" id="inpSurname" >
-      </div>
-      <label for="result">result:</label>
-      <span id="result"></span>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+</head>
+<body>
+    <div class="App"></div>   
+    <!-- <script src="main.js"></script>  -->
+    <script>
+        
+        const APP=document.getElementsByClassName('App')[0];
+        let LetterRow=[];
+        let RowLength=10;
+        let ColumnLength=10;
+
+        const PIXEL_SIZE=5;
+
+        //генерирует случайный цвет и цифру
+        function randomLetter() {
+            let switcher=Math.random()>0.5 ? true : false
+            return{
+                bg: switcher ? 'red' : 'black',
+                letter: switcher ? 1 : 0
+            }      
+        }
+
+        //строит строку
+        function buildRow (){
+            for (let i = 0; i < RowLength/2; i++) {
+                LetterRow.push(randomLetter())               
+            }
+            let LetterRowReversed=LetterRow.slice().reverse()
+            LetterRow.push(...LetterRowReversed)
+        }
+        
+        //создаёт блок
+        function block(blockParam){
+            let block = document.createElement('div');
+            block.innerText='';
+            block.style.backgroundColor=blockParam.bg;
+            block.style.width=`${PIXEL_SIZE}px`;
+            block.style.height=`${PIXEL_SIZE}px`;
+            return block;
+        }
+
+        function displayRow(id){
+            let div=document.createElement('div');
+            div.style.display='flex';
+            LetterRow.map((x)=>{
+                let blockToAppend=block(x);
+                div.appendChild(blockToAppend)
+            });
+            // LetterRow.map(x=>div.innerHTML+=`<div style="background-color: ${x.bg}; width:${PIXEL_SIZE}px; height:${PIXEL_SIZE}px;">.</div>`);
+            document.getElementById(id) .appendChild(div)
+        }
+
+        function buildFigure(index) {
+            let container=document.createElement('div');
+            container.id='container'+index;
+            container.classList.add('container')
+            APP.appendChild(container);
+            for (let i = 0; i < ColumnLength; i++) {
+                buildRow();
+                displayRow(container.id);
+
+                LetterRow=[]                                  
+            }          
+        }
+
+        for (let i = 0; i < 72; i++) {
+            buildFigure(i);                        
+        }
+
+
+
+        //console.log('почле стирания очка: \r',LetterRow)
+    </script>
+</body>
 </html>
